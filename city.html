@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon - Explore City</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <nav id="navbar">
+        <div class="nav-logo" onclick="window.location.href='index.html'" style="cursor:pointer">HORIZON</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="city.html" class="active">Destinations</a></li>
+            <li><a href="places.html">Places</a></li>
+            <li><a href="plan-trip.html">Plan Trip</a></li>
+        </ul>
+        <div class="nav-right">
+            <button id="themeBtn" onclick="toggleTheme()">Dark Mode</button>
+            <a href="favorites.html">Saved</a>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <img id="cityHeroImg" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1400" alt="City"/>
+        <div class="page-hero-overlay">
+            <p id="cityBreadcrumb">Home / Explore</p>
+            <h1 id="cityTitle">Loading...</h1>
+            <span id="citySubtitle">Fetching city image and places...</span>
+        </div>
+    </div>
+
+    <section class="places-header">
+        <h2>Top Places in <span id="placesCityName">this city</span></h2>
+        <p>Live place names fetched from Geoapify</p>
+    </section>
+
+    <div class="cards-section">
+        <div class="cards-grid" id="cityGrid">
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/city.js"></script>
+</body>
+</html>
