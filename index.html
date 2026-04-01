@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon - Smart City Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-logo">HORIZON</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="city.html">Destinations</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="plan-trip.html">Plan Trip</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <button id="themeBtn">Dark Mode</button>
+            <a href="favorites.html">Saved (0)</a>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-text">
+            <p>DISCOVER INDIA AND BEYOND</p>
+            <h1>Where will your Horizon begin?</h1>
+            <p>Plan your perfect journey across India's most beautiful cities</p>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search a city...">
+                <button onclick="searchCity()">Explore</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="trip-types">
+        <button onclick="filterByType('all')">All</button>
+        <button onclick="filterByType('solo')">Solo</button>
+        <button onclick="filterByType('couple')">Couple</button>
+        <button onclick="filterByType('family')">Family</button>
+        <button onclick="filterByType('luxury')">Luxury</button>
+        <button onclick="filterByType('wellness')">Wellness</button>
+    </div>
+
+    <section id="cities">
+        <h2>Featured Destinations</h2>
+
+        <div class="cities-grid">
+
+            <div class="city-card" onclick="goToCity('jaipur')">
+                <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=900&auto=format&fit=crop" alt="Jaipur">
+                <div class="city-info">
+                    <p>The Pink City</p>
+                    <h3>Jaipur</h3>
+                </div>
+            </div>
+
+            <div class="city-card" onclick="goToCity('goa')">
+                <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800" alt="Goa">
+                <div class="city-info">
+                    <p>Coastal Retreat</p>
+                    <h3>Goa</h3>
+                </div>
+            </div>
+
+            <div class="city-card" onclick="goToCity('delhi')">
+                <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800" alt="Delhi">
+                <div class="city-info">
+                    <p>Imperial Capital</p>
+                    <h3>Delhi</h3>
+                </div>
+            </div>
+
+            <div class="city-card" onclick="goToCity('manali')">
+                <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800" alt="Manali">
+                <div class="city-info">
+                    <p>Alpine Sanctuary</p>
+                    <h3>Manali</h3>
+                </div>
+            </div>
+
+            <div class="city-card" onclick="goToCity('mumbai')">
+                <img src="https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?w=800" alt="Mumbai">
+                <div class="city-info">
+                    <p>Island Metropolis</p>
+                    <h3>Mumbai</h3>
+                </div>
+            </div>
+
+            <div class="city-card" onclick="goToCity('bangalore')">
+                <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=800" alt="Bangalore">
+                <div class="city-info">
+                    <p>Silicon Valley of India</p>
+                    <h3>Bangalore</h3>
+                </div>
+            </div>
+
+            <div class="city-card" onclick="goToCity('chandigarh')">
+                <img src="https://images.unsplash.com/photo-1597074866923-dc0589150358?w=800" alt="Chandigarh">
+                <div class="city-info">
+                    <p>The City Beautiful</p>
+                    <h3>Chandigarh</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <h3>HORIZON</h3>
+            <p>Explore the best of India</p>
+        </div>
+
+        <div>
+            <h4>Cities</h4>
+            <ul>
+                <li><a href="city.html?city=delhi">Delhi</a></li>
+                <li><a href="city.html?city=mumbai">Mumbai</a></li>
+                <li><a href="city.html?city=jaipur">Jaipur</a></li>
+                <li><a href="city.html?city=goa">Goa</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Links</h4>
+            <ul>
+                <li><a href="places.html">Places</a></li>
+                <li><a href="plan-trip.html">Plan Trip</a></li>
+                <li><a href="favorites.html">Favorites</a></li>
+            </ul>
+        </div>
+
+        <p>© 2024 Horizon. All rights reserved.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
